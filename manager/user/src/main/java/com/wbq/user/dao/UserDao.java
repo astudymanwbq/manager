@@ -2,6 +2,7 @@ package com.wbq.user.dao;
 
 import java.util.List;
 
+import com.wbq.user.dto.UserDto;
 import com.wbq.user.po.UserPO;
 import org.apache.ibatis.annotations.Param;
 
@@ -28,6 +29,13 @@ public interface UserDao {
 	 * @return 账号信息
 	 */
 	UserPO getUserByAccount(@Param("account") String account);
+
+	/**
+	 * 通过用户id获得用户的权限
+	 * @param userId 用户id
+	 * @return 用户的权限
+	 */
+	UserDto getUserPrivilegeById(@Param("userId") Integer userId);
 
 	/**
 	 * 通过账号和用户名获得用户

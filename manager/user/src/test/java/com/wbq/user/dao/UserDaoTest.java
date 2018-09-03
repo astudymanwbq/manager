@@ -2,6 +2,7 @@ package com.wbq.user.dao;
 
 import javax.annotation.Resource;
 
+import com.wbq.user.dto.UserDto;
 import com.wbq.user.po.UserPO;
 import org.junit.Assert;
 import org.junit.Test;
@@ -43,5 +44,12 @@ public class UserDaoTest {
 
 	@Test
 	public void updateUserByAccount() {
+	}
+
+	@Test
+	public void getUserPrivilegeById(){
+		int userId=1;
+		UserDto userDto=userDao.getUserPrivilegeById(userId);
+		System.out.println(userDto.toString());
 	}
 }

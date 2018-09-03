@@ -15,6 +15,20 @@
 		<result column="update_time" property="updateTime"/>
 	</resultMap>
 
+	<resultMap id="userPrivilegeResultMap" type="user_privilege">
+		<result column="user_id" property="userId"/>
+		<result column="account" property="account"/>
+		<result column="role_name" property="roleName"/>
+
+		<collection property="menuList" ofType="com.wbq.user.dto.MenuDto">
+			<result column="menu_id" property="menuId"/>
+			<result column="url" property="url"/>
+			<result column="menu_name" property="menuName"/>
+			<result column="menu_type" property="menuType"/>
+			<result column="menu_parentid" property="menuParentId"/>
+		</collection>
+	</resultMap>
+
 	<sql id="all_column">
 		id,name,account,password,image_url,phone,email,state,create_time,update_time
 	</sql>
@@ -29,6 +43,24 @@
 		<include refid="all_column"/>
 		from user
 		where account=#{account}
+	</select>
+
+	<select id="getUserPrivilegeById" parameterType="int" resultMap="userPrivilegeResultMap">
+		select
+		user.id user_id,
+		user.account,
+		role.`name` role_name,
+		menu.id menu_id,
+		menu.url,
+		menu.`name` menu_name,
+		menu.type menu_type,
+		menu.parent_id menu_parentid
+		from user
+		left join user_role on user.id=user_role.user_id
+		left join role on role.id=user_role.role_id
+		left join role_menu on role_menu.role_id=role.id
+		left join menu on menu.id=role_menu.menu_id
+		where user.id=#{userId}
 	</select>
 
 

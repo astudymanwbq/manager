@@ -14,6 +14,7 @@
 		<typeAlias alias="user_role" type="com.wbq.user.po.UserRolePO"/>
 		<typeAlias alias="menu" type="com.wbq.user.po.MenuPO"/>
 		<typeAlias alias="role_menu" type="com.wbq.user.po.RoleMenuPO"/>
+		<typeAlias alias="user_privilege" type="com.wbq.user.dto.UserDto"/>
 	</typeAliases>
 
 	<typeHandlers>
