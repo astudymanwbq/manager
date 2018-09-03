@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 /**
   *	mybatis中枚举和int的映射
-  * @author biqin.wu@bianlifeng.com
+  * @author biqin.wu
   * @since 02 九月 2018
   */
 public class EnumTypeHandler<E extends Enum<?> & BaseEnum> extends BaseTypeHandler<BaseEnum> {

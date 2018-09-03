@@ -4,7 +4,7 @@ import com.wbq.common.enumeration.BaseEnum;
 
 /**
   *
-  * @author biqin.wu@bianlifeng.com
+  * @author biqin.wu
   * @since 02 九月 2018
   */
 public class EnumUtils {

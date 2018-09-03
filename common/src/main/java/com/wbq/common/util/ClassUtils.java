@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 
 /**
   *
-  * @author biqin.wu@bianlifeng.com
+  * @author biqin.wu
   * @since 01 九月 2018
   */
 public class ClassUtils {

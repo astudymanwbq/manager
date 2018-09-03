@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 /**
   *
-  * @author biqin.wu@bianlifeng.com
+  * @author biqin.wu
   * @since 03 九月 2018
   */
 @Repository

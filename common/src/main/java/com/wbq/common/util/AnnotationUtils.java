@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 
 /**
   *	注解工具类
-  * @author biqin.wu@bianlifeng.com
+  * @author biqin.wu
   * @since 01 九月 2018
   */
 public class AnnotationUtils {

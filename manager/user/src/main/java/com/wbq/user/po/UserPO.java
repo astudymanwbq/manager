@@ -7,7 +7,7 @@ import lombok.Data;
 
 /**
   * user表实体类
-  * @author biqin.wu@bianlifeng.com
+  * @author biqin.wu
   * @since 02 九月 2018
   */
 @Data
